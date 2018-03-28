@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
-import AttestationForm from '../AttestationForm'
-
 class Home extends Component {
   render() {
     return(
       <main className="container">
         <div className="pure-g">
           <div className="pure-u-1-1">
-            <AttestationForm/>
             <h1>Good to Go!</h1>
             <p>Your Truffle Box is installed and ready.</p>
             <h2>UPort Authentication</h2>
