@@ -10,11 +10,13 @@ function userLoggedIn(data) {
   }
 }
 
+console.log(settings)
+
 export function transactionRequest(data) {
   return function(dispatch, props) {
     const contractInstance = uport.contract(ERC20)
     const contract = contractInstance.at(settings.erc20Address)
-    contract.transfer(data.ethAddress, 500);
+    // contract.transfer(data.ethAddress, 500);
     return !data.ethAddress ? null : contract.transfer(data.ethAddress, 500);
   }
 }

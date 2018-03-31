@@ -42,6 +42,10 @@ const SimpleForm = (props) => {
           <Field name="biography" component="textarea"/>
         </div>
       </div>
+      <div>
+        <button type="submit" disabled={submitting}>Submit</button>
+        <button type="button" disabled={pristine || submitting} onClick={reset}>Clear Values</button>
+      </div>
     </form>
   )
 }
